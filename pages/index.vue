@@ -58,5 +58,6 @@
 
 .links {
   padding-top: 15px;
+  padding-top: 15px;
 }
 </style>
