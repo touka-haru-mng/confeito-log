@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <div>
-      <NuxtLogo />
+    <div class="header__logo-box">
+    <img src="@/assets/img/Img.png" alt="Logo" class="header__logo">
+
+  </div>
       <h1 class="title">
         こんぺいとう育成日記
       </h1>
@@ -42,7 +45,8 @@
   padding-bottom: 15px;
 }
 
-.links {  
+.links {
   padding-top: 15px;
 }
+
 </style>
