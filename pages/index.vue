@@ -9,16 +9,28 @@
         こんぺいとう育成日記
       </h1>
       <div class="links">
-        <van-button icon="smile-comment" round type="primary" size="normal" color="#7232dd">profile</van-button>
-        <van-button icon="gem" round type="primary" size="normal" color="#7232dd" plain>オタ活</van-button>
-        <van-button icon="fire-o" round type="primary" size="normal" color="linear-gradient(to right, #ff6034, #ee0a24)">
-          注意事項
+        <van-button @click="profilebutton" icon="smile-comment" round type="primary" size="large" color="#3299dd">せいたい</van-button>
+        <van-button icon="gem" round type="primary" size="normal" color="#3299dd" plain>オタかつ</van-button>
+        <van-button icon="fire-o" round type="primary" size="normal" color="#ddda32">
+          ちゅうい
         </van-button>
-      </div>
-    </div>
-  </div>
-</template>
+        </div>
 
+      </div>
+  </div>
+    </div>
+</template>
+<script>
+export default {
+  methods: {
+    profilebutton: function() {
+ 　　　// do something
+
+      this.$router.push('/profile')
+    },
+  },
+}
+</script>
 <style>
 .container {
   margin: 0 auto;
@@ -31,6 +43,7 @@
 
 .title {
   display: block;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
   font-weight: 300;
   font-size: 50px;
   color: #35495e;
@@ -48,5 +61,9 @@
 .links {
   padding-top: 15px;
 }
-
+.van-button{
+    width: 150px;
+    height: 120px;
+    font-size:20px;
+}
 </style>
