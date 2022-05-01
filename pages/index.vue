@@ -1,51 +1,97 @@
 <template>
   <div class="container">
-    <div>
-    <div class="header__logo-box">
-    <img src="@/assets/img/Img.png" alt="Logo" class="header__logo">
-
+  <div class="header_link_box">
+  <p class="link_home"><a href="">ホーム</a></p>
+  <p class="link_profil"><a href="">生態(プロフィール)</a></p>
   </div>
-      <h1 class="title">
-        こんぺいとう育成日記
-      </h1>
+    <div class="header__logo-box">
+    <img src="@/assets/img/blog_title_img.png" alt="Logo" class="header__logo">
+    <h1 class="title">
+      こんぺいとう育成日記
+    </h1>
+    </div>
       <div class="links">
-        <van-button @click="profilebutton" icon="smile-comment" round type="primary" size="large" color="#3299dd">せいたい</van-button>
+        <van-button @click="profilebutton" icon="smile-comment" round type="primary" size="large" color="#3299dd">日々のぼやき</van-button>
         <van-button icon="gem" round type="primary" size="normal" color="#3299dd" plain>オタかつ</van-button>
         <van-button icon="fire-o" round type="primary" size="normal" color="#ddda32">
-          ちゅうい
+          注意
         </van-button>
-        </div>
-
       </div>
-  </div>
-    </div>
+</div>
 </template>
 <script>
 export default {
   methods: {
-    profilebutton: function() {
- 　　　// do something
-
+    profilebutton() {
       this.$router.push('/profile')
     },
   },
 }
 </script>
+
 <style>
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+.header_link_box{
+display: flex;
+justify-content: center;
+}
+.header_link_box .link_home{
+padding:10px 30px;
 
+}
+.header_link_box .link_home a::after {
+	content: '';
+	position: absolute;
+	top: 3%;
+	left: 43%;
+	width: 0;
+	height: 0;
+	background-color: rgba(185,155,0,0.5);
+	border-radius: 50%;
+	transition: 0.3s;
+}
+
+.header_link_box .link_home a:hover::after {
+	width: 40px;
+	height: 40px;
+}
+.header_link_box .link_profil{
+padding:10px 30px;
+}
+.header_link_box .link_profil a::after {
+	content: '';
+	position: absolute;
+	top: 3%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	background-color: rgba(185,155,0,0.5);
+	border-radius: 50%;
+	transition: 0.3s;
+}
+
+.header_link_box .link_profil a:hover::after {
+	width: 40px;
+	height: 40px;
+}
+
+.img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
 .title {
   display: block;
   font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
   font-weight: 300;
-  font-size: 50px;
+  font-size: 30px;
   color: #35495e;
   letter-spacing: 1px;
 }
