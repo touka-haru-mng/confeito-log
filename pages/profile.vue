@@ -1,6 +1,9 @@
 <template>
+
 <div class="container">
 <div>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
 <h1 class="title">
 こんぺいとうの生体
 </h1>
@@ -30,7 +33,7 @@ display: flex;
 }
 
 .title {
-  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  font-family:'Yusei Magic', sans-serif;
   margin: 10px 50px 20px;
   font-weight: 300;
   padding: 1em;
@@ -50,7 +53,8 @@ vertical-align: middle;
 }
 
 .flex .profile_text {
-background: #f8f0d7;
+  font-family:'Yusei Magic', sans-serif;
+  background: #f8f0d7;
   border-left: 5px dotted rgba(0,0,0,.1);
   box-shadow: 0 0 0 5 #f8f0d7;
   padding: 6em 1em 6em;

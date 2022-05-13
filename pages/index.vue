@@ -6,8 +6,10 @@
   </div>
     <div class="header__logo-box">
     <img src="@/assets/img/blog_title_img.png" alt="Logo" class="header__logo">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
     <h1 class="title">
-      こんぺいとう育成日記
+      こんぺいとうにっき
     </h1>
     </div>
       <div class="links">
@@ -41,6 +43,7 @@ export default {
 .header_link_box{
 display: flex;
 justify-content: center;
+font-family:'Yusei Magic', sans-serif;
 }
 .header_link_box .link_home{
 padding:10px 30px;
@@ -89,7 +92,7 @@ padding:10px 30px;
 }
 .title {
   display: block;
-  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  font-family:'Yusei Magic', sans-serif;
   font-weight: 300;
   font-size: 30px;
   color: #35495e;
@@ -106,6 +109,7 @@ padding:10px 30px;
 
 .links {
   padding-top: 15px;
+  font-family:'Yusei Magic', sans-serif;
 }
 .van-button{
     width: 150px;
