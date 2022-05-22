@@ -1,13 +1,20 @@
 <template>
-  <div class="container">
-  <div class="header_link_box">
-  <p class="link_home"><a href="">ホーム</a></p>
-  <p class="link_profil"><a href="">生態(プロフィール)</a></p>
-  </div>
+  <!-- 大枠（今は中心に集まるようにしている -->
+  <!-- background-image:url("\assets\img\background.jpg");は悩む -->
+  <body class="container">
+
+  <!-- フォントデザインの読み込み -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+
+  <!-- ホーム画面上部のリンクボタン -->
+  <ul class="header_link_box">
+  <li class="link_home"><a href="">ホーム</a></li>
+  <li class="link_profil"><a href="">生態(プロフィール)</a></li>
+  </ul>
+
     <div class="header__logo-box">
     <img src="@/assets/img/blog_title_img.png" alt="Logo" class="header__logo">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
     <h1 class="title">
       こんぺいとうにっき
     </h1>
@@ -19,7 +26,7 @@
           注意
         </van-button>
       </div>
-</div>
+</body>
 </template>
 <script>
 export default {
@@ -39,60 +46,28 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-.header_link_box{
-display: flex;
-justify-content: center;
-font-family:'Yusei Magic', sans-serif;
-}
-.header_link_box .link_home{
-padding:10px 30px;
-
-}
-.header_link_box .link_home a::after {
-	content: '';
-	position: absolute;
-	top: 3%;
-	left: 43%;
-	width: 0;
-	height: 0;
-	background-color: rgba(185,155,0,0.5);
-	border-radius: 50%;
-	transition: 0.3s;
+  font-family:'Yusei Magic', sans-serif;
+  background-color: #fdf5e6;
 }
 
-.header_link_box .link_home a:hover::after {
-	width: 40px;
-	height: 40px;
-}
-.header_link_box .link_profil{
-padding:10px 30px;
-}
-.header_link_box .link_profil a::after {
-	content: '';
-	position: absolute;
-	top: 3%;
-	left: 50%;
-	width: 0;
-	height: 0;
-	background-color: rgba(185,155,0,0.5);
-	border-radius: 50%;
-	transition: 0.3s;
+.header_link_box {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-.header_link_box .link_profil a:hover::after {
-	width: 40px;
-	height: 40px;
+.header_link_box li {
+margin-left: 20px;
 }
 
 .img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
 }
 .title {
   display: block;
-  font-family:'Yusei Magic', sans-serif;
   font-weight: 300;
   font-size: 30px;
   color: #35495e;
